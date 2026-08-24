@@ -1,5 +1,11 @@
+<!DOCTYPE html>
+
+<html lang="sl">
+<pre>
 #!/bin/sh
 
-cd ~/doc/zapiski/
+cd ~/zapiski/
 
-st -e vim ./glavna.md
+st -e vim ./zapiski.md
+</pre>
+</html>

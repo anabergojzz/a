@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+
+<html lang="sl">
+<pre>
 map gt cd ~/tmp
 set shellopts '-eu'
 set ifs "\n"
@@ -112,3 +116,5 @@ cmd zip ${{
 }}
 
 map Y $printf "%s" "$fx" | xclip -selection clipboard
+</pre>
+</html>

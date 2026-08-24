@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="sl">
+<pre>
+#!/bin/sh
+fn="/home/user/doc/plonki/"
+n=$(ls $fn*)
+
+names="
+/home/user/.config/nvim/init.lua
+/home/user/doc/POLOLU-1183.pdf
+"
+
+chosen=$(echo "$n$names" | dmenu -l 10 -p "Plonki:" -i)
+
+extension=$(echo "$chosen" | cut -d'.' -f2)
+
+case $extension in
+	"") ;;
+	"pdf") zathura "$chosen" & ;;
+	"png") sxiv "$chosen" & ;;
+	"plonk") cat "$chosen" | xclip -selection clipboard& ;;
+	*) st -e vim "$chosen" & ;;
+esac
+</pre>
+</html>
